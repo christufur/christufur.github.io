@@ -274,74 +274,145 @@ footer {
     height: 100%;
 }
 
+/* Mobile-first media queries */
 @media (max-width: 768px) {
+    /* Base layout adjustments */
     body {
         padding: 10px;
+        font-size: 14px;
     }
 
+    /* Header and navigation improvements */
     header {
         flex-direction: column;
         align-items: center;
+        padding: 0.5rem;
     }
 
     nav {
-        margin: 0;
+        margin: 1rem 0;
         width: 100%;
-        text-align: center;
     }
 
     nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    nav li {
+        margin: 0.25rem;
+    }
+
+    /* ASCII title optimization */
+    .ascii-title {
+        font-size: 4px;
+        margin: 0.5rem auto;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .ascii-title::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Image flex container improvements */
+    .imageflex {
         flex-direction: column;
+        align-items: center;
         gap: 1rem;
         padding: 1rem 0;
     }
 
-    .ascii-title {
-        font-size: 6px;
-        transform: scale(0.8);
-        margin: 10px auto;
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    .lightbutton {
-        margin: 10px;
-    }
-
-    .imageflex {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .imageflex img {
         width: 100%;
-        max-width: 400px;
+        max-width: 300px;
         height: auto;
+        object-fit: contain;
     }
 
     .imageflexcontent {
         width: 100%;
-        margin: 1rem 0;
-        padding: 0;
-        text-align: left;
+        margin: 0;
+        padding: 0.5rem;
+        text-align: center;
+        font-size: 1rem;
     }
 
-    /* Goodreads Container */
+    /* Contact page specific */
+    contacts {
+        padding-top: 2rem;
+        margin: 0;
+    }
+
+    contacts ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    contacts img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Dark mode button positioning */
+    .lightbutton {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+        padding: 8px 12px;
+        font-size: 14px;
+        opacity: 0.9;
+    }
+
+    /* Goodreads widget mobile optimization */
     .gr_custom_container_1739225405 {
         width: 100%;
-    }
-
-    .gr_custom_each_container_1739225405 {
-        margin-bottom: 20px;
+        padding: 5px;
     }
 
     .gr_custom_book_container_1739225405 {
-        width: 100px;
+        width: 80px;
         height: auto;
+        margin-right: 10px;
     }
 
-    .gr_custom_book_container_1739225405 img {
-        width: 100%;
+    .gr_custom_header_1739225405 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .gr_custom_each_container_1739225405 {
+        padding: 0.5rem;
+    }
+
+    /* Music page responsiveness */
+    main img {
+        max-width: 100%;
         height: auto;
+    }
+}
+
+/* Small phone optimization */
+@media (max-width: 320px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ascii-title {
+        font-size: 3px;
+    }
+
+    .gr_custom_book_container_1739225405 {
+        width: 60px;
     }
 }
