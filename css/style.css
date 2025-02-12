@@ -372,13 +372,10 @@ footer {
 
     /* Dark mode button positioning */
     .lightbutton {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 1000;
+        margin: 0.5rem 0.5rem 0 auto;
         padding: 8px 12px;
         font-size: 14px;
-        opacity: 0.9;
+        display: block;
     }
 
     /* Goodreads widget mobile optimization */
@@ -400,6 +397,11 @@ footer {
 
     .gr_custom_each_container_1739225405 {
         padding: 0.5rem;
+    }
+
+    .imageflexlink{
+        width: 40px;
+        height: 40px;
     }
 
     /* Music page responsiveness */
