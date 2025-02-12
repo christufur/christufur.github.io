@@ -37,6 +37,7 @@ body.dark {
     margin-right: 0;
     display: block;
     cursor: pointer;
+    position: static;
 }
 
 .lightbutton:hover {
@@ -372,10 +373,14 @@ footer {
 
     /* Dark mode button positioning */
     .lightbutton {
+        position: static;
+        top:auto;
+        right:auto;
         margin: 0.5rem 0.5rem 0 auto;
         padding: 8px 12px;
         font-size: 14px;
         display: block;
+        z-index: auto;
     }
 
     /* Goodreads widget mobile optimization */
