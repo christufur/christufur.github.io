@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Personal Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<button class="lightbutton" onclick="darkMode()">Dark Mode</button>
+<body>
+    <header>
+        <pre class="ascii-title">
+_________ .__          .__          __                .__                      _____                              
+\_   ___ \|  |_________|__| _______/  |_  ____ ______ |  |__   ___________    /     \   ________________  ________
+/    \  \/|  |  \_  __ \  |/  ___/\   __\/  _ \\____ \|  |  \_/ __ \_  __ \  /  \ /  \_/ __ \_  __ \__  \ \___   /
+\     \___|   Y  \  | \/  |\___ \  |  | (  <_> )  |_> >   Y  \  ___/|  | \/ /    Y    \  ___/|  | \// __ \_/    / 
+ \______  /___|  /__|  |__/____  > |__|  \____/|   __/|___|  /\___  >__|    \____|__  /\___  >__|  (____  /_____ \
+       \/     \/              \/              |__|        \/     \/                \/     \/           \/      \/
+    </pre>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/projects.html">Projects</a></li>
+                <li><a href="/pages/reading.html">Reading</a></li>
+                <li><a href="/pages/music.html">Music</a></li>
+                <li><a href="/pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>My Personal Projects</h1>
+        <h2>Spursy Data</h2>
+        <div class="imageflex">
+            <img src="/assests/images/TottVsManU.png" alt="" style="width: 400px;height: 450px;">
+            <h3 class="imageflexcontent">An ongoing data science project of mine is to keep track of my favorite football team Tottenaham's stats as shown. I use 
+                python and the python library pandas to calculate, graph, and proccess data.
+            </h3>
+            <a class="imageflexlink" href="https://github.com/christufur/Spurs"><img src="/assests/images/github.png" height="40" width=40/></a>
+
+        </div>
+        <h2>CodeCraft</h2>
+        <div class="imageflex">
+            <a href="https://codecraft-zatwkv27ba-uc.a.run.app/"><img src="/assests/images/CodeCraft.png" height="400px" width="400px"/></a>
+            <h3 class="imageflexcontent">During the Google Tech Exchange program we were tasked with using generative AI to make a python application and my
+                group and I came up with a programming assistant meant for college students. The image on the left is the portion of the application I developed.
+            </h3>
+            <a class="imageflexlink" href="https://github.com/christuphor/final-project-codecraft"><img src="/assests/images/github.png" height="40" width="40"/></a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 My Website. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    function darkMode(){
+        document.body.classList.toggle("dark")
+    };
+</script>
+</html> 

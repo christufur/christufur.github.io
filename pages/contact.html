@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Personal Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<button class="lightbutton" onclick="darkMode()">Dark Mode</button>
+<body>
+    <header>
+        <pre class="ascii-title">
+_________ .__          .__          __                .__                      _____                              
+\_   ___ \|  |_________|__| _______/  |_  ____ ______ |  |__   ___________    /     \   ________________  ________
+/    \  \/|  |  \_  __ \  |/  ___/\   __\/  _ \\____ \|  |  \_/ __ \_  __ \  /  \ /  \_/ __ \_  __ \__  \ \___   /
+\     \___|   Y  \  | \/  |\___ \  |  | (  <_> )  |_> >   Y  \  ___/|  | \/ /    Y    \  ___/|  | \// __ \_/    / 
+ \______  /___|  /__|  |__/____  > |__|  \____/|   __/|___|  /\___  >__|    \____|__  /\___  >__|  (____  /_____ \
+       \/     \/              \/              |__|        \/     \/                \/     \/           \/      \/
+    </pre>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/projects.html">Projects</a></li>
+                <li><a href="/pages/reading.html">Reading</a></li>
+                <li><a href="/pages/music.html">Music</a></li>
+                <li><a href="/pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Where to find me!</h2>
+        <contacts>
+            <ul>
+                <li><a href="mailto:chris67@nmsu.edu"><img src="/assests/images/email.png" height="100px" width="100px"></a></li>
+                <li><a href="https://github.com/christufur"><img src="/assests/images/github.png" height="100px" width="100px"></a></li>
+                <li><a href="https://www.linkedin.com/in/christuphor/"><img src="/assests/images/linkedin.png" height="100px" width="100px"></a></li>
+            </ul>
+        </contacts>
+    </main>
+
+    <footer>
+        <p>© 2025 My Website. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    function darkMode(){
+        document.body.classList.toggle("dark")
+    };
+</script>
+</html> 
