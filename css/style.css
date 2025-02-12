@@ -41,17 +41,22 @@ body.dark {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
     margin-bottom: 1rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     margin-bottom: 0.8rem;
 }
 
 p {
     margin-bottom: 1rem;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
 }
 
 header {
@@ -65,12 +70,11 @@ header {
     font-family: Courier, "Courier New", monospace;
     white-space: pre;
     line-height: 1;
-    font-size: 10px;
+    font-size:clamp (6px, 2vw, 10px);
     margin: 0;  
     padding: 0; 
     margin-right: auto; 
     overflow-x: auto;
-    overflow-y: hidden;
 }
 
 contacts {
@@ -104,6 +108,7 @@ nav ul {
     list-style: none;
     align-items: center;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -153,14 +158,18 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    padding: 1rem 0;
 }
 
 .imageflex{
     margin-bottom: 2rem;
+    flex-direction: row;
+    gap:1rem;
     display: flex;
     border-top: 1px solid #eee;
     padding: 2rem 0;
     margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
 .imageflexcontent{
@@ -170,6 +179,7 @@ footer {
     line-height: 1.8;
     margin-left: 5px; 
     margin-top: 10; 
+    min-width: 280px;
     flex: 1;
 }
 
