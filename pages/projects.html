@@ -1,15 +1,18 @@
+<!--Page to display personal coding projects-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Personal Website</title>
+    <title>Christufur</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <!--Light or Dark mode button-->
     <button class="lightbutton" onclick="darkMode()">Dark Mode</button>
     <header>
+        <!--ascii title for name-->
         <pre class="ascii-title">
 _________ .__          .__          __                .__                      _____                              
 \_   ___ \|  |_________|__| _______/  |_  ____ ______ |  |__   ___________    /     \   ________________  ________
@@ -18,6 +21,7 @@ _________ .__          .__          __                .__                      _
  \______  /___|  /__|  |__/____  > |__|  \____/|   __/|___|  /\___  >__|    \____|__  /\___  >__|  (____  /_____ \
        \/     \/              \/              |__|        \/     \/                \/     \/           \/      \/
     </pre>
+        <!--navigation bar with references to other pages-->
         <nav>
             <ul>
                 <li><a href="/index.html">Home</a></li>
@@ -30,27 +34,35 @@ _________ .__          .__          __                .__                      _
     </header>
     <main>
         <h1>My Personal Projects</h1>
+        <!--first project about soccer statisitics-->
         <h2>Spursy Data</h2>
+        <!--div class used to have the text next to the image-->
         <div class="imageflex">
+            <!--reference to graphic I made from the program-->
             <img src="/assests/images/TottVsManU.png" alt="" style="width: 400px;height: 450px;">
             <h3 class="imageflexcontent">An ongoing data science project of mine is to keep track of my favorite football team Tottenaham's stats as shown. I use 
                 python and the python library pandas to calculate, graph, and proccess data.
             </h3>
+            <!--link to the github repo-->
             <a class="imageflexlink" href="https://github.com/christufur/Spurs"><img src="/assests/images/github.png" height="40" width=40/></a>
 
         </div>
+        <!--second project from google tech exchange-->
         <h2>CodeCraft</h2>
+        <!--div class used to have the text next to the image-->
         <div class="imageflex">
+            <!--reference to image of website that is also a link to said website-->
             <a href="https://codecraft-zatwkv27ba-uc.a.run.app/"><img src="/assests/images/CodeCraft.png" height="400px" width="400px"/></a>
             <h3 class="imageflexcontent">During the Google Tech Exchange program we were tasked with using generative AI to make a python application and my
                 group and I came up with a programming assistant meant for college students. The image on the left is the portion of the application I developed.
             </h3>
+            <!--link to github repo-->
             <a class="imageflexlink" href="https://github.com/christuphor/final-project-codecraft"><img src="/assests/images/github.png" height="40" width="40"/></a>
         </div>
     </main>
 
     <footer>
-        <p>© 2025 My Website. All rights reserved.</p>
+        <p>© 2025 Christufur. All rights reserved.</p>
     </footer>
 </body>
 <script>

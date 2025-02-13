@@ -1,3 +1,4 @@
+/*Format for each page*/
 * {
     margin: 0;
     padding: 0;
@@ -8,57 +9,66 @@ html {
     font-size: 16px;
 }
 
+/*styling for the body*/
 body {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono', monospace; /*Uses jetbrains font for body*/
     line-height: 1.6;
-    color: white;
+    color: white; /*Sets the font color to white for body*/
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto; 
     padding: 0 20px;
-    background-color: #414868;
+    background-color: #414868; /* Background color to dark blue, to fit tokyo storm color theme*/
 }
 
+
+/*Child of the body element for when darkmode activated*/
 body.dark {
-    background-color: black;
+    background-color: black; /*only difference is background color is black*/
 }
 
+/*The light/dark mode toggle button*/
 .lightbutton {
-    border-radius: 4px;
+    border-radius: 4px; /*makes the button slightly round*/
     border: none;
-    background-color: #636363;
-    color: white;
-    padding: 5px 5px;
-    margin-top: 1rem;
-    text-align: center;
+    background-color: #636363; /*button color is grey so is seen on both blue and black page*/
+    color: white; /*font color is white*/
+    padding: 5px 5px; /*as to space nav and the top*/
+    margin-top: 1rem; /*more spacing for the top*/
+    text-align: center; /*text on the center of the button*/
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin-left: auto;
-    margin-right: 0;
+    margin-left: auto; 
+    margin-right: 0; /*sets button the right of the page*/
     display: block;
-    cursor: pointer;
-    position: static;
+    cursor: pointer; /*on hover turn cursor to pointer*/
+    position: static; /*button doesn't move*/
 }
 
+/*on hover action for light/dark mode toggle*/
 .lightbutton:hover {
-    background-color: white;
-    color: black;
+    background-color: white; /*on hove set background color to white*/
+    color: black; /*sets the font color to black*/
 }
 
+/*changes default h1 to have larger font*/
 h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
+/*changes default h2 to have larger font*/
 h2 {
     font-size: 2rem;
     margin-bottom: 0.8rem;
 }
 
+/*changes default paragraph to have larger margin on bottom*/
 p {
     margin-bottom: 1rem;
 }
 
+/*change header defualt*/
 header {
     display: flex;
     justify-content: space-between;
@@ -66,19 +76,21 @@ header {
     padding: .5rem 0;
 }
 
+/*Ascii art of name*/
 .ascii-title {
-    font-family: Courier, "Courier New", monospace;
+    font-family: Courier, "Courier New", monospace; /*better font for ascii art*/
     white-space: pre;
-    line-height: 1;
-    font-size: 10px;
-    margin: 0;
+    line-height: 1; /*better for look of art*/
+    font-size: 10px; 
+    margin: 0; 
     padding: 0;
     margin-right: auto;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow-x: auto; /*changes size of */
+    overflow-y: hidden; /*cant scroll up and down on ascii art in case it's too small*/
     max-width: 100%;
 }
 
+/*contacts container element similar to nav*/
 contacts {
     display: flex;
     justify-content: center;
@@ -86,6 +98,7 @@ contacts {
     margin-left: 2rem;
 }
 
+/*unordered list for contacts*/
 contacts ul {
     display: flex;
     gap: 2rem;
@@ -94,19 +107,22 @@ contacts ul {
     margin: 0;
 }
 
+/*contacts anchor*/
 contacts a {
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
+/*navigation bar element*/
 nav {
-    margin-left: 2rem;
+    margin-left: 2rem; /*spacing against ascii art*/
 }
 
+/*unordered list*/
 nav ul {
-    display: flex;
-    gap: 2rem;
+    display: flex; /*flex based on display*/
+    gap: 2rem; /*gap between anchors in list*/
     list-style: none;
     align-items: center;
     margin: 0;
@@ -118,6 +134,7 @@ nav a {
     font-weight: bold;
 }
 
+/*When hover on the anchors in the nav, make them red*/
 nav a:hover {
     color: #ff757f;
 }
@@ -127,25 +144,12 @@ main {
     padding: 2rem 0;
 }
 
+/*footer element*/
 footer {
     text-align: center;
     padding: 2rem 0;
     margin-top: 2rem;
     border-top: 1px solid #eee;
-}
-
-.button {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #0056b3;
 }
 
 .container {
@@ -161,6 +165,7 @@ footer {
     gap: 2rem;
 }
 
+/*container for images that go with text*/
 .imageflex {
     margin-bottom: 2rem;
     display: flex;
@@ -169,6 +174,7 @@ footer {
     margin-top: 2rem;
 }
 
+/*text portion of the pair*/
 .imageflexcontent {
     margin: 0;
     padding: .5rem 1rem;
@@ -180,6 +186,7 @@ footer {
     word-wrap: break-word;
 }
 
+/*child of content for the bio*/
 .imageflexcontent .profile {
     margin-left: 5px;
     margin-top: 10px;
@@ -187,6 +194,7 @@ footer {
     align-items: center;
 }
 
+/*easily display github links inside flex conatiner*/
 .imageflexlink {
     margin-left: 5px;
     margin-top: 10px;
@@ -283,23 +291,25 @@ footer {
         font-size: 14px;
     }
 
-    /* Header and navigation improvements */
+    /* Header becomes a column on flex and align things centrally */
     header {
         flex-direction: column;
         align-items: center;
         padding: 0.5rem;
     }
 
+    /*nav margin shortens*/
     nav {
         margin: 1rem 0;
         width: 100%;
     }
 
+    /*list changes for mobile*/
     nav ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: flex; /*if shorter page flex and change size to screen*/
+        flex-direction: row; /*keeps them in a row when flexed*/
+        flex-wrap: wrap; 
+        justify-content: center; /*force the list onto the center of the header*/
         gap: 1rem;
         padding: 0.5rem;
     }
@@ -308,12 +318,12 @@ footer {
         margin: 0.25rem;
     }
 
-    /* ASCII title optimization */
+    /* ASCII title */
     .ascii-title {
-        font-size: 4px;
+        font-size: 4px; /*smaller font*/
         margin: 0.5rem auto;
         max-width: 100%;
-        overflow-x: auto;
+        overflow-x: auto; 
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
     }
@@ -322,7 +332,7 @@ footer {
         display: none;
     }
 
-    /* Image flex container improvements */
+    /* Image flex container */
     .imageflex {
         flex-direction: column;
         align-items: center;
@@ -353,7 +363,7 @@ footer {
         box-sizing: border-box;
     }
 
-    /* Contact page specific */
+    /* Contact page */
     contacts {
         padding-top: 2rem;
         margin: 0;
@@ -383,7 +393,7 @@ footer {
         z-index: auto;
     }
 
-    /* Goodreads widget mobile optimization */
+    /* Goodreads widget changes for mobile */
     .gr_custom_container_1739225405 {
         width: 100%;
         padding: 5px;
