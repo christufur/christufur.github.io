@@ -1,60 +1,125 @@
-<!--Page to display Github page, my email, and my proffesional social media-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Christufur</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Christopher Meraz - Email, GitHub, LinkedIn">
+    <meta name="theme-color" content="#414868">
+    
+    <title>Christopher Meraz | Contact</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
-    <!--Light or Dark mode button-->
-    <button class="lightbutton" onclick="darkMode()">Dark Mode</button>
-    <!--ascii title for name-->
-    <header>
-        <pre class="ascii-title">
-_________ .__          .__          __                .__                      _____                              
-\_   ___ \|  |_________|__| _______/  |_  ____ ______ |  |__   ___________    /     \   ________________  ________
-/    \  \/|  |  \_  __ \  |/  ___/\   __\/  _ \\____ \|  |  \_/ __ \_  __ \  /  \ /  \_/ __ \_  __ \__  \ \___   /
-\     \___|   Y  \  | \/  |\___ \  |  | (  <_> )  |_> >   Y  \  ___/|  | \/ /    Y    \  ___/|  | \// __ \_/    / 
- \______  /___|  /__|  |__/____  > |__|  \____/|   __/|___|  /\___  >__|    \____|__  /\___  >__|  (____  /_____ \
-       \/     \/              \/              |__|        \/     \/                \/     \/           \/      \/
-    </pre>
-        <!--navigation bar with references to other pages-->
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/projects.html">Projects</a></li>
-                <li><a href="/pages/reading.html">Reading</a></li>
-                <li><a href="/pages/music.html">Music</a></li>
-                <li><a href="/pages/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <main>
-        <h2>Where to find me!</h2>
-        <!--contacts div created to better display the icons that are also links-->
-        <contacts>
-            <ul>
-                <!--link to email through email icon-->
-                <li><a href="mailto:chris67@nmsu.edu"><img src="/assests/images/email.png" height="100px" width="100px"></a></li>
-                <!--link to github through github icon-->
-                <li><a href="https://github.com/christufur"><img src="/assests/images/github.png" height="100px" width="100px"></a></li>
-                <!--link to linked in page through icon-->
-                <li><a href="https://www.linkedin.com/in/christuphor/"><img src="/assests/images/linkedin.png" height="100px" width="100px"></a></li>
-            </ul>
-        </contacts>
-    </main>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <pre class="ascii-title">
+                    _________ .__          .__          __                .__                      _____                              
+                    \_   ___ \|  |_________|__| _______/  |_  ____ ______ |  |__   ___________    /     \   ________________  ________
+                    /    \  \/|  |  \_  __ \  |/  ___/\   __\/  _ \\____ \|  |  \_/ __ \_  __ \  /  \ /  \_/ __ \_  __ \__  \ \___   /
+                    \     \___|   Y  \  | \/  |\___ \  |  | (  &lt;_&gt; )  |_&gt; &gt;   Y  \  ___/|  | \/ /    Y    \  ___/|  | \// __ \_/    / 
+                     \______  /___|  /__|  |__/____  &gt; |__|  \____/|   __/|___|  /\___  &gt;__|    \____|__  /\___  &gt;__|  (____  /_____ \
+                           \/     \/              \/              |__|        \/     \/                \/     \/           \/      \/
+                            </pre>
 
-    <footer>
-        <p>© 2025 Christufur. All rights reserved.</p>
-    </footer>
+                <nav aria-label="Main navigation">
+                    <ul>
+                        <li><a href="/pages/index.html">Home</a></li>
+                        <li><a href="/pages/projects.html">Projects</a></li>
+                        <li><a href="/pages/reading.html">Reading</a></li>
+                        <li><a href="/pages/music.html">Music</a></li>
+                        <li><a href="/pages/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <h1>Let's Connect!</h1>
+            <p style="color: var(--color-text-secondary); margin-bottom: 3rem; text-align: center;">
+                Feel free to reach out through any of these platforms
+            </p>
+
+            <div class="contact-grid">
+                <!-- Email -->
+                <a href="mailto:chris67@nmsu.edu" 
+                   class="contact-link"
+                   aria-label="Send email to chris67@nmsu.edu">
+                    <img 
+                        src="/assests/images/email.png" 
+                        alt=""
+                        class="contact-icon"
+                        loading="lazy"
+                    >
+                    <span style="font-weight: 600;">Email</span>
+                    <span style="font-size: 0.9rem; color: var(--color-text-secondary);">
+                        chris67@nmsu.edu
+                    </span>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/christufur" 
+                   class="contact-link"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Visit Christopher's GitHub profile">
+                    <img 
+                        src="/assests/images/github.png" 
+                        alt=""
+                        class="contact-icon"
+                        loading="lazy"
+                    >
+                    <span style="font-weight: 600;">GitHub</span>
+                    <span style="font-size: 0.9rem; color: var(--color-text-secondary);">
+                        @christufur
+                    </span>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/christuphor/" 
+                   class="contact-link"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Visit Christopher's LinkedIn profile">
+                    <img 
+                        src="/assests/images/linkedin.png" 
+                        alt=""
+                        class="contact-icon"
+                        loading="lazy"
+                    >
+                    <span style="font-weight: 600;">LinkedIn</span>
+                    <span style="font-size: 0.9rem; color: var(--color-text-secondary);">
+                        /in/christuphor
+                    </span>
+                </a>
+            </div>
+
+            <!-- Additional info section -->
+            <section style="margin-top: 4rem; text-align: center;">
+                <div class="card" style="max-width: 600px; margin: 0 auto;">
+                    <h2>Open to Opportunities</h2>
+                    <p style="color: var(--color-text-secondary);">
+                        I'm currently looking for internship opportunities in full stack development, data science
+                        and web development. If you have an interesting project or position, 
+                        I'd love to hear from you!
+                    </p>
+                </div>
+            </section>
+
+            <!-- Response time note -->
+            <p style="text-align: center; margin-top: 2rem; color: var(--color-text-secondary); font-size: 0.9rem;">
+                💬 I typically respond within 24-48 hours
+            </p>
+        </main>
+
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
 </body>
-<script>
-    function darkMode(){
-        document.body.classList.toggle("dark")
-    };
-</script>
-</html> 
+</html>

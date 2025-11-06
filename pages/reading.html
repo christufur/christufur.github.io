@@ -1,126 +1,197 @@
-<!--This page is to show off my goodreads current reads-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Christufur</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Christopher Meraz's Reading List - Currently Reading Books">
+    <meta name="theme-color" content="#414868">
+    
+    <title>Christopher Meraz | Reading</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
-    <!--Light or Dark mode button-->
-    <button class="lightbutton" onclick="darkMode()">Dark Mode</button>
-    <header>
-        <!--ascii title for name-->
-        <pre class="ascii-title">
-_________ .__          .__          __                .__                      _____                              
-\_   ___ \|  |_________|__| _______/  |_  ____ ______ |  |__   ___________    /     \   ________________  ________
-/    \  \/|  |  \_  __ \  |/  ___/\   __\/  _ \\____ \|  |  \_/ __ \_  __ \  /  \ /  \_/ __ \_  __ \__  \ \___   /
-\     \___|   Y  \  | \/  |\___ \  |  | (  <_> )  |_> >   Y  \  ___/|  | \/ /    Y    \  ___/|  | \// __ \_/    / 
- \______  /___|  /__|  |__/____  > |__|  \____/|   __/|___|  /\___  >__|    \____|__  /\___  >__|  (____  /_____ \
-       \/     \/              \/              |__|        \/     \/                \/     \/           \/      \/
-    </pre>
-        <!--navigation bar with references to other pages-->
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/projects.html">Projects</a></li>
-                <li><a href="/pages/reading.html">Reading</a></li>
-                <li><a href="/pages/music.html">Music</a></li>
-                <li><a href="/pages/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!--Using goodreads provided widget that uses it's own styling that I tweaked in CSS, I can display my good reads currently reading list-->
-    <main>
-        <div id="gr_custom_widget_1739225405">
-            <div class="gr_custom_container_1739225405">
-      <h2 class="gr_custom_header_1739225405">
-      <p style="color: white;">Christopher&#39;s bookshelf: currently-reading</p>
-      </h2>
-        <!--Container for first book (Empire of silence)-->
-        <div class="gr_custom_each_container_1739225405">
-          <!--container for the books cover-->
-            <div class="gr_custom_book_container_1739225405">
-              <a title="Empire of Silence (The Sun Eater, #1)" rel="nofollow" href="https://www.goodreads.com/review/show/7309468127?utm_medium=api&amp;utm_source=custom_widget"><img alt="Empire of Silence" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1523897945l/36454667._SX98_.jpg" /></a>
-            </div>
-            <!--div for my rating of the book-->
-            <div class="gr_custom_rating_1739225405">
-              <span class=" staticStars notranslate"><img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
-            </div>
-            <!--div for the books title-->
-            <div class="gr_custom_title_1739225405">
-              <a rel="nofollow" href="https://www.goodreads.com/review/show/7309468127?utm_medium=api&amp;utm_source=custom_widget">Empire of Silence</a>
-            </div>
-            <!--div for the authors name-->
-            <div class="gr_custom_author_1739225405">
-              by <a rel="nofollow" href="https://www.goodreads.com/author/show/16917839.Christopher_Ruocchio">Christopher Ruocchio</a>
-            </div>
-            <div class="gr_custom_tags_1739225405">
-              tagged:
-              currently-reading
-            </div>
-        </div>
-        <!--container for second boook (three body problem)-->
-        <div class="gr_custom_each_container_1739225405">
-            <!--container for the books cover-->
-            <div class="gr_custom_book_container_1739225405">
-              <a title="The Three-Body Problem (Remembrance of Earth’s Past, #1)" rel="nofollow" href="https://www.goodreads.com/review/show/7309468565?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Three-Body Problem" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1415428227l/20518872._SX98_.jpg" style="size: 150%;"/></a>
-            </div>
-            <!--div for my rating of the book-->
-            <div class="gr_custom_rating_1739225405">
-              <span class=" staticStars notranslate"><img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
-            </div>
-            <!--div for the books title-->
-            <div class="gr_custom_title_1739225405">
-              <a rel="nofollow" href="https://www.goodreads.com/review/show/7309468565?utm_medium=api&amp;utm_source=custom_widget">The Three-Body Problem</a>
-            </div>
-            <!--Authors name div-->
-            <div class="gr_custom_author_1739225405">
-              by <a rel="nofollow" href="https://www.goodreads.com/author/show/5780686.Liu_Cixin">Liu Cixin</a>
-            </div>
-            <div class="gr_custom_tags_1739225405">
-              tagged:
-              currently-reading
-            </div>
-        </div>
-        <!--container for third book (All the lovers in the night)-->
-        <div class="gr_custom_each_container_1739225405">
-            <!--container for the cover of the book-->
-            <div class="gr_custom_book_container_1739225405">
-              <a title="All the Lovers in the Night" rel="nofollow" href="https://www.goodreads.com/review/show/7309470570?utm_medium=api&amp;utm_source=custom_widget"><img alt="All the Lovers in the Night" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1637059389l/59336625._SX98_.jpg" /></a>
-            </div>
-            <!--shows my rating in stars-->
-            <div class="gr_custom_rating_1739225405">
-              <span class=" staticStars notranslate"><img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
-            </div>
-            <!--div for the books title-->
-            <div class="gr_custom_title_1739225405">
-              <a rel="nofollow" href="https://www.goodreads.com/review/show/7309470570?utm_medium=api&amp;utm_source=custom_widget">All the Lovers in the Night</a>
-            </div>
-            <!--Author's name div-->
-            <div class="gr_custom_author_1739225405">
-              by <a rel="nofollow" href="https://www.goodreads.com/author/show/5559451.Mieko_Kawakami">Mieko Kawakami</a>
-            </div>
-            <div class="gr_custom_tags_1739225405">
-              tagged:
-              currently-reading
-            </div>
-        </div>
-    <br style="clear: both"/>
-    <center>
-    </center>
-    
-    </main>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <footer>
-        <p>© 2025 Christufur. All rights reserved.</p>
-    </footer>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <pre class="ascii-title">
+                    _________ .__          .__          __                .__                      _____                              
+                    \_   ___ \|  |_________|__| _______/  |_  ____ ______ |  |__   ___________    /     \   ________________  ________
+                    /    \  \/|  |  \_  __ \  |/  ___/\   __\/  _ \\____ \|  |  \_/ __ \_  __ \  /  \ /  \_/ __ \_  __ \__  \ \___   /
+                    \     \___|   Y  \  | \/  |\___ \  |  | (  &lt;_&gt; )  |_&gt; &gt;   Y  \  ___/|  | \/ /    Y    \  ___/|  | \// __ \_/    / 
+                     \______  /___|  /__|  |__/____  &gt; |__|  \____/|   __/|___|  /\___  &gt;__|    \____|__  /\___  &gt;__|  (____  /_____ \
+                           \/     \/              \/              |__|        \/     \/                \/     \/           \/      \/
+                            </pre>
+
+                <nav aria-label="Main navigation">
+                    <ul>
+                        <li><a href="/pages/index.html">Home</a></li>
+                        <li><a href="/pages/projects.html">Projects</a></li>
+                        <li><a href="/pages/reading.html">Reading</a></li>
+                        <li><a href="/pages/music.html">Music</a></li>
+                        <li><a href="/pages/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+            
+            </div>
+        </header>
+
+        <main id="main-content">
+            <h1>Currently Reading</h1>
+            <p style="color: var(--color-text-secondary); margin-bottom: 2rem;">
+                Books I'm currently working through
+            </p>
+
+            <div class="book-list">
+                <!-- Book 1: Empire of Silence -->
+                <article class="book-card">
+                    <img 
+                        src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1523897945l/36454667._SX98_.jpg"
+                        alt="Empire of Silence book cover"
+                        class="book-cover"
+                        loading="lazy"
+                    >
+                    <div class="book-info">
+                        <h2 class="book-title">
+                            <a href="https://www.goodreads.com/book/show/36454667-empire-of-silence" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               style="color: var(--color-text); text-decoration: none;">
+                                Empire of Silence
+                            </a>
+                        </h2>
+                        <p class="book-author">
+                            by <a href="https://www.goodreads.com/author/show/16917839.Christopher_Ruocchio" 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  style="color: var(--color-accent); text-decoration: none;">
+                                Christopher Ruocchio
+                            </a>
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-secondary);">
+                            The Sun Eater, #1
+                        </p>
+                        <div style="margin-top: 0.5rem;">
+                            <span style="color: var(--color-text-secondary); font-size: 0.85rem;">
+                                Status: Reading
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Book 2: The Three-Body Problem -->
+                <article class="book-card">
+                    <img 
+                        src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1415428227l/20518872._SX98_.jpg"
+                        alt="The Three-Body Problem book cover"
+                        class="book-cover"
+                        loading="lazy"
+                    >
+                    <div class="book-info">
+                        <h2 class="book-title">
+                            <a href="https://www.goodreads.com/book/show/20518872-the-three-body-problem" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               style="color: var(--color-text); text-decoration: none;">
+                                The Three-Body Problem
+                            </a>
+                        </h2>
+                        <p class="book-author">
+                            by <a href="https://www.goodreads.com/author/show/5780686.Liu_Cixin" 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  style="color: var(--color-accent); text-decoration: none;">
+                                Liu Cixin
+                            </a>
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-secondary);">
+                            Remembrance of Earth's Past, #1
+                        </p>
+                        <div style="margin-top: 0.5rem;">
+                            <span style="color: var(--color-text-secondary); font-size: 0.85rem;">
+                                Status: Reading
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Book 3: All the Lovers in the Night -->
+                <article class="book-card">
+                    <img 
+                        src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1637059389l/59336625._SX98_.jpg"
+                        alt="All the Lovers in the Night book cover"
+                        class="book-cover"
+                        loading="lazy"
+                    >
+                    <div class="book-info">
+                        <h2 class="book-title">
+                            <a href="https://www.goodreads.com/book/show/59336625-all-the-lovers-in-the-night" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               style="color: var(--color-text); text-decoration: none;">
+                                All the Lovers in the Night
+                            </a>
+                        </h2>
+                        <p class="book-author">
+                            by <a href="https://www.goodreads.com/author/show/5559451.Mieko_Kawakami" 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  style="color: var(--color-accent); text-decoration: none;">
+                                Mieko Kawakami
+                            </a>
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-secondary);">
+                            Contemporary Fiction
+                        </p>
+                        <div style="margin-top: 0.5rem;">
+                            <span style="color: var(--color-text-secondary); font-size: 0.85rem;">
+                                Status: Reading
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Reading stats or info -->
+            <section style="margin-top: 3rem;">
+                <h2>About My Reading</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div class="card">
+                        <h3>📚 Genres</h3>
+                        <p style="color: var(--color-text-secondary);">
+                            Science Fiction, Fantasy, Contemporary Fiction, and Non-Fiction
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>🎯 Goal</h3>
+                        <p style="color: var(--color-text-secondary);">
+                            Always reading multiple books across different genres
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>📖 Platform</h3>
+                        <p style="color: var(--color-text-secondary);">
+                            <a href="https://www.goodreads.com/user/show/170712084-christopher" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               style="color: var(--color-accent);">
+                                Follow me on Goodreads
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
 </body>
-<script>
-  function darkMode(){
-      document.body.classList.toggle("dark")
-  };
-</script>
-</html> 
+</html>
