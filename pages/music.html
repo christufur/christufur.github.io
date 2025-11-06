@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Christopher Meraz's Music - Recently Played & Favorite Albums">
+    <meta name="theme-color" content="#414868">
+    
+    <title>Christopher Meraz | Music</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <script type="module" crossorigin src="/assets/main-BpSl0qpH.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-Blqdf10O.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <pre class="ascii-title">
+                    _________ .__          .__          __                .__                      _____                              
+                    \_   ___ \|  |_________|__| _______/  |_  ____ ______ |  |__   ___________    /     \   ________________  ________
+                    /    \  \/|  |  \_  __ \  |/  ___/\   __\/  _ \\____ \|  |  \_/ __ \_  __ \  /  \ /  \_/ __ \_  __ \__  \ \___   /
+                    \     \___|   Y  \  | \/  |\___ \  |  | (  &lt;_&gt; )  |_&gt; &gt;   Y  \  ___/|  | \/ /    Y    \  ___/|  | \// __ \_/    / 
+                     \______  /___|  /__|  |__/____  &gt; |__|  \____/|   __/|___|  /\___  &gt;__|    \____|__  /\___  &gt;__|  (____  /_____ \
+                           \/     \/              \/              |__|        \/     \/                \/     \/           \/      \/
+                            </pre>
+
+                <nav aria-label="Main navigation">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/pages/">Projects</a></li>
+                        <li><a href="/pages/reading.html">Reading</a></li>
+                        <li><a href="/music.html">Music</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+        
+            </div>
+        </header>
+
+        <main id="main-content">
+            <h1>My Favorite Music</h1>
+            <p style="color: var(--color-text-secondary); margin-bottom: 2rem;">
+                A live feed of what I'm listening to and my all-time favorite albums
+            </p>
+
+            <div class="media-grid">
+                <!-- Recently Played -->
+                <section aria-labelledby="recently-played-heading">
+                    <div class="card">
+                        <h2 id="recently-played-heading">Recently Played</h2>
+                        <p style="color: var(--color-text-secondary); margin-bottom: 1rem;">
+                            Live from Last.fm
+                        </p>
+                        <div class="media-item">
+                            <a href="https://www.last.fm/user/christuphor" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               aria-label="View my Last.fm profile">
+                                <img 
+                                    src="https://lastfm-recently-played.vercel.app/api?user=christuphor" 
+                                    alt="Recently played tracks on Last.fm"
+                                    loading="lazy"
+                                    style="width: 100%; max-width: 400px; height: auto;"
+                                >
+                            </a>
+                        </div>
+                        <a href="https://www.last.fm/user/christuphor" 
+                           class="btn btn-secondary" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="margin-top: 1rem; display: inline-flex;">
+                            🎵 View Full Profile
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Favorite Albums -->
+                <section aria-labelledby="favorite-albums-heading">
+                    <div class="card">
+                        <h2 id="favorite-albums-heading">Favorite Albums</h2>
+                        <p style="color: var(--color-text-secondary); margin-bottom: 1rem;">
+                            My top picks across all genres
+                        </p>
+                        <div class="media-item">
+                            <img 
+                                src="/assets/Topster-B4d9N2y0.png" 
+                                alt="Collage of Christopher's favorite albums"
+                                loading="lazy"
+                                style="width: 100%; max-width: 700px; height: auto;"
+                            >
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Music Stats or Additional Info -->
+            <section style="margin-top: 3rem;">
+                <h2>About My Music Taste</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div class="card">
+                        <h3>🎸 Genres</h3>
+                        <p style="color: var(--color-text-secondary);">
+                            Rock, Alternative, Indie, Electronic, and more
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>📊 Tracking</h3>
+                        <p style="color: var(--color-text-secondary);">
+                            All my music listening is tracked via Last.fm scrobbling
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>💿 Collection</h3>
+                        <p style="color: var(--color-text-secondary);">
+                            Always discovering new artists and expanding my horizons
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        
+    </div>
+
+</body>
+</html>
