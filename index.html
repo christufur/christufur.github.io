@@ -1,136 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Christopher Meraz - Computer Science Student at NMSU | Full-Stack Developer | Data Science Enthusiast">
-    <meta name="keywords" content="Christopher Meraz, Computer Science, Web Development, Data Science, Portfolio, NMSU">
-    <meta name="author" content="Christopher Meraz">
-    <meta name="theme-color" content="#414868">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Christopher Meraz - Portfolio">
-    <meta property="og:description" content="Third-year CS student at NMSU | Full-Stack Developer | Data Science Enthusiast">
-    
-    <title>Christopher Meraz | Computer Science Student</title>
-    
-    <!-- Preconnect to external resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <script type="module" crossorigin src="/assets/main-BpSl0qpH.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-Blqdf10O.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>christopher meraz</title>
+  <meta name="description" content="software engineer, ms cs @ nmsu. full-stack web apps and desktop audio software.">
+  <link rel="canonical" href="https://christuphor.dev/">
+  <meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="christopher meraz">
+  <meta property="og:description" content="software engineer, ms cs @ nmsu. full-stack web apps and desktop audio software.">
+  <meta property="og:url" content="https://christuphor.dev/">
+  <meta property="og:image" content="https://christuphor.dev/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="fonts/paper-mono.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;var l=document.createElement('link');l.rel='preload';l.as='image';l.href='images/mountains-'+((t?t==='day':matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark')+'.webp?v=1';document.head.appendChild(l)}catch(e){}</script>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
 </head>
-<body>
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <div class="container">
-        <header>
-            <div class="header-content">
-                <!-- ASCII Title -->
-                <pre class="ascii-title">
-_________ .__          .__          __                .__                      _____                              
-\_   ___ \|  |_________|__| _______/  |_  ____ ______ |  |__   ___________    /     \   ________________  ________
-/    \  \/|  |  \_  __ \  |/  ___/\   __\/  _ \\____ \|  |  \_/ __ \_  __ \  /  \ /  \_/ __ \_  __ \__  \ \___   /
-\     \___|   Y  \  | \/  |\___ \  |  | (  &lt;_&gt; )  |_&gt; &gt;   Y  \  ___/|  | \/ /    Y    \  ___/|  | \// __ \_/    / 
- \______  /___|  /__|  |__/____  &gt; |__|  \____/|   __/|___|  /\___  &gt;__|    \____|__  /\___  &gt;__|  (____  /_____ \
-       \/     \/              \/              |__|        \/     \/                \/     \/           \/      \/
-                </pre>
-
-                <!-- Navigation -->
-                <nav aria-label="Main navigation">
-                    <ul>
-                        <li><a href="/pages/contact.html">Home</a></li>
-                        <li><a href="/pages/projects.html">Projects</a></li>
-                        <li><a href="/pages/reading.html">Reading</a></li>
-                        <li><a href="/pages/music.html">Music</a></li>
-                        <li><a href="/pages/contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <main id="main-content">
-            <h1>Christopher Meraz</h1>
-            
-            <section class="content-section" aria-labelledby="about-heading">
-                <div>
-                    <img 
-                        src="/assets/DSC08829-WVR2kcw7.jpg" 
-                        alt="Christopher Meraz portrait"
-                        width="250"
-                        height="350"
-                        loading="lazy"
-                    >
-                </div>
-                <div class="content-text">
-                    <h2 id="about-heading" class="sr-only">About Me</h2>
-                    <h3 style="margin-bottom: 1rem;">Full-Stack Developer & CS Student</h3>
-                    <p>
-                        I'm a fourth-year computer science student at New Mexico State University (GPA: 3.5) with a passion for 
-                        full-stack development and data science. I completed the Google Tech Exchange Program with a 4.0 GPA, 
-                        focusing on full-stack development, data structures, and software engineering best practices.
-                    </p>
-                    
-                    <p style="margin-top: 1rem;">
-                        <strong>Interests:</strong> Full-stack development, data visualization, sports analytics, reading, 
-                        soccer, video games, and fitness.
-                    </p>
-                    <div style="margin-top: 1.5rem;">
-                        <a href="/projects.html" class="btn">View My Projects</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Skills Section -->
-            <section aria-label="Technical Skills" style="margin-top: 3rem;">
-                <h2>Technical Skills</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
-                    <div class="card">
-                        <h3>💻 Languages</h3>
-                        <p>Python, JavaScript, TypeScript, Java, C/C++, SQL, HTML5, CSS3</p>
-                    </div>
-                    <div class="card">
-                        <h3>⚛️ Frameworks</h3>
-                        <p>React, Node.js, Express, Flask, Streamlit, Pandas, NumPy, Plotly, Matplotlib</p>
-                    </div>
-                    <div class="card">
-                        <h3>🛠️ Tools & Cloud</h3>
-                        <p>Git, PostgreSQL, MongoDB, Google Cloud Platform, Docker, Prisma, Plaid API</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Highlights -->
-            <section aria-label="Highlights" style="margin-top: 3rem;">
-                <h2>Highlights</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
-                    <div class="card">
-                        <h3>🎓 Education</h3>
-                        <p>NMSU Computer Science<br>GPA: 3.5</p>
-                    </div>
-                    <div class="card">
-                        <h3>🏆 Google Tech Exchange</h3>
-                        <p>Full-Stack Program<br>GPA: 4.0</p>
-                    </div>
-                    <div class="card">
-                        <h3>👨🏫 Teaching</h3>
-                        <p>CS Tutor & STEM Instructor<br>50+ students taught</p>
-                    </div>
-                    <div class="card">
-                        <h3>💼 Leadership</h3>
-                        <p>GDSC Technical Officer<br>Monthly workshops</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
+<body id="top">
+<header>
+  <h1><a href="index.html" style="text-decoration:none">christopher meraz</a></h1>
+  <nav aria-label="main">
+    <a href="projects.html">projects</a>
+    <a href="https://github.com/christufur">github</a>
+    <a href="https://www.linkedin.com/in/christuphor/">linkedin</a>
+    <a href="mailto:hi@christuphor.dev">email</a>
+    <button id="theme" type="button" hidden>day</button>
+  </nav>
+  <p id="nowplaying" hidden></p>
+</header>
+<main>
+<section>
+  <h2>about</h2>
+  <ul>
+    <li><span class="hl">ms computer science @ nmsu</span>, las cruces nm</li>
+    <li><span class="hl">software engineer @ sandia national labs</span> — critical skills recruiting program</li>
+    <li>i like to build full-stack web apps</li>
+    <li>unfortunately I am a tottenham fan</li>
+    <li>now: building <a href="projects.html#plinth">plinth</a>, an offline music player in rust + tauri</li>
+  </ul>
+</section>
+<section>
+  <h2>things i've done</h2>
+  <ul>
+    <li><span class="hl">1st place, <a href="https://www.nmtechtalks.com/desert-dev-lab-2026">desertdev 2026</a> hackathon</span> — <a href="projects.html#pantry-ai">pantry.ai</a></li>
+    <li>developed <span class="hl"><a href="projects.html#aggiemarket">aggiemarket</a></span>, a live campus marketplace for nmsu students</li>
+    <li><span class="hl">google tech exchange</span>, full-stack swe program</li>
+    <li>cs tutor at nmsu · tutoring 10+ students a week</li>
+    <li>previous technical officer & current alumni relations officer, google student developer club @ nmsu</li>
+  </ul>
+</section>
+<section id="contrib" hidden>
+  <h2>github</h2>
+  <div class="contrib" aria-hidden="true"></div>
+  <p class="muted"></p>
+</section>
+</main>
+<footer>
+  <p><a href="#top">back to top</a></p>
+  <p><em>audere est facere — to dare is to do</em></p>
+</footer>
 </body>
 </html>

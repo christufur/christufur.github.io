@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>projects · christopher meraz</title>
+  <meta name="description" content="things christopher meraz built">
+  <link rel="canonical" href="https://christuphor.dev/projects.html">
+  <meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="projects · christopher meraz">
+  <meta property="og:description" content="things christopher meraz built">
+  <meta property="og:url" content="https://christuphor.dev/projects.html">
+  <meta property="og:image" content="https://christuphor.dev/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="fonts/paper-mono.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;var l=document.createElement('link');l.rel='preload';l.as='image';l.href='images/mountains-'+((t?t==='day':matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark')+'.webp?v=1';document.head.appendChild(l)}catch(e){}</script>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body id="top">
+<header>
+  <h1><a href="index.html" style="text-decoration:none">christopher meraz</a></h1>
+  <nav aria-label="main">
+    <a href="index.html" aria-current="page">home</a>
+    <a href="https://github.com/christufur">github</a>
+    <a href="https://www.linkedin.com/in/christuphor/">linkedin</a>
+    <a href="mailto:hi@christuphor.dev">email</a>
+    <button id="theme" type="button" hidden>day</button>
+  </nav>
+  <p id="nowplaying" hidden></p>
+</header>
+<main>
+<h2>projects</h2>
+<div class="grid">
+<article class="card" id="aggiemarket">
+  <figure class="media"><img src="media/aggiemarket.webp" alt="aggie market home page: buy, sell, and connect with nmsu students" width="1280" height="720" loading="lazy"></figure>
+  <div class="head"><h3>aggiemarket</h3><span class="chip on">live</span></div>
+  <p class="blurb">campus marketplace for nmsu students: buy, sell, offer services and post events. verified @nmsu.edu accounts only.</p>
+  <p class="role">role: full-stack lead — api, real-time websocket messaging, aws deployment</p>
+  <p class="stack">2026 · expo · react 19 · typescript · bun · elysia · sqlite · s3 · ec2</p>
+  <p class="links"><a href="https://aggiemarket.xyz">live</a> <a href="https://github.com/christufur/AggieMarket">code</a></p>
+</article>
+<article class="card" id="pantry-ai">
+  <figure class="media"><img src="media/pantry-ai.webp" alt="pantry.ai kitchen board: items sorted by expiry with a rescue window and recipe buttons" width="1280" height="720" loading="lazy"></figure>
+  <div class="head"><h3>pantry.ai</h3><span class="chip on">1st place</span></div>
+  <p class="blurb">snap your fridge, get a plan. gemini vision finds what you have, then builds recipes, meal plans, food-bank matches and a food-waste dashboard.</p>
+  <p class="role">note: team of three at desertdev 2026</p>
+  <p class="stack">2026 · next.js · typescript · react · tailwind · sqlite · gemini api</p>
+  <p class="links"><a href="https://github.com/christufur/PantryAI">code</a></p>
+</article>
+<article class="card" id="plinth">
+  <figure class="media empty" aria-hidden="true"></figure>
+  <div class="head"><h3>plinth</h3><span class="chip wip">in progress</span></div>
+  <p class="blurb">offline desktop audio player for macos and linux.</p>
+  <p class="stack">2026 · tauri 2 · sveltekit · rust (rodio, symphonia)</p>
+  <p class="links"><a href="https://github.com/christufur/plinth">code</a></p>
+</article>
+<article class="card" id="mazzy-money">
+  <figure class="media"><img src="media/mazzy-money.webp" alt="mazzy money overview: net worth, income, expenses and smart insights" width="1280" height="720" loading="lazy"></figure>
+  <div class="head"><h3>mazzy money</h3><span class="chip wip">in progress</span></div>
+  <p class="blurb">personal finance app. syncs bank accounts through plaid and sorts transactions into 15+ categories.</p>
+  <p class="stack">2025– · typescript · react · node · express · postgresql · prisma · plaid</p>
+  <p class="links"><a href="https://github.com/christufur/MazzyMoney">code</a></p>
+</article>
+<article class="card" id="codecraft">
+  <figure class="media"><img src="media/codecraft.webp" alt="codecraft chat: a prompt asking for a tic-tac-toe program in python and the generated code" width="1280" height="720" loading="lazy"></figure>
+  <div class="head"><h3>codecraft</h3><span class="chip ">archived</span></div>
+  <p class="blurb">ai coding-education platform built at google tech exchange. 500+ student users. multi-language code runner, ai pair programmer, study chatbot.</p>
+  <p class="stack">2024 · python · streamlit · google cloud · bigquery · gemini api</p>
+</article>
+<article class="card" id="spurs-analytics">
+  <figure class="media"><img src="media/spurs-analytics.webp" alt="tottenham shot map against man u: shot size shows chance quality, goals in red" width="1280" height="720" loading="lazy"></figure>
+  <div class="head"><h3>spurs analytics</h3><span class="chip ">archived</span></div>
+  <p class="blurb">tottenham hotspur data work: shot maps and match analysis.</p>
+  <p class="stack">python · pandas · jupyter</p>
+  <p class="links"><a href="https://github.com/christufur/Tottenham-Shot-Map">code</a></p>
+</article>
+<article class="card" id="home-lab">
+  <figure class="media empty" aria-hidden="true"></figure>
+  <div class="head"><h3>home lab</h3><span class="chip on">running</span></div>
+  <p class="blurb">self-hosted home server on an hp elitedesk: ubuntu server and docker containers (casaos), jellyfin for media, tailscale for private networking, pi-hole for ad-blocking dns.</p>
+  <p class="role">next: hosting this site and mazzy money here</p>
+  <p class="stack">ubuntu server · docker · casaos · jellyfin · tailscale · pi-hole</p>
+</article>
+</div>
+</main>
+<footer>
+  <p><a href="#top">back to top</a></p>
+  <p><em>audere est facere — to dare is to do</em></p>
+</footer>
+</body>
+</html>

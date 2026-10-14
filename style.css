@@ -1,0 +1,160 @@
+/* Paper Mono (OFL 1.1, github.com/paper-design/paper-mono), self-hosted.
+   Subset to latin and cut to weights 400-500, the only ones the site uses (52 KB -> 11 KB). */
+@font-face {
+  font-family: "Paper Mono";
+  src: url("fonts/paper-mono.woff2") format("woff2");
+  font-weight: 400 500;
+  font-display: swap;
+}
+
+/* tokens, "ink & paper": the UI is near-black and near-white; the mountains are the only color.
+   Night is the default. Day applies on prefers-color-scheme: light or [data-theme="day"].
+   --faint is decoration only, never text. */
+:root {
+  --bg: #0b0b0c; --line: #1f2023; --ink: #e8e8ea; --dim: #8a8c92; --faint: #5a5c62;
+  --accent: #e2bd6b; /* moon gold: link-underline hover and the now-playing dot, nowhere else */
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="night"]) {
+    --bg: #fafafa; --line: #e5e5e7; --ink: #121214; --dim: #656770; --faint: #9a9ca2;
+    --accent: #b3470b; /* sunset orange */
+    color-scheme: light;
+  }
+}
+:root[data-theme="day"] {
+  --bg: #fafafa; --line: #e5e5e7; --ink: #121214; --dim: #656770; --faint: #9a9ca2;
+  --accent: #b3470b;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg); color: var(--ink);
+  font: 15px/1.6 "Paper Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding: 0 16px 96px;
+}
+@media (min-width: 720px) { body { font-size: 16px; } }
+
+/* one column; header, main and footer all line up on it */
+header, main, footer { width: min(560px, 100%); margin-inline: auto; }
+main { display: flex; flex-direction: column; gap: 32px; padding-top: 16px; }
+section { display: flex; flex-direction: column; gap: 8px; }
+
+/* sticky header: the page scrolls under it, so it needs a backing */
+header {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 24px 0 12px;
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
+h1 { font-size: 1.25rem; font-weight: 500; }
+h2, h3 { font-size: 1em; font-weight: 400; }
+h2 { color: var(--dim); }
+h2::before { content: "## "; content: "## " / ""; }
+p, li { overflow-wrap: anywhere; }
+
+/* links: underlined in --line; the underline turns accent on hover */
+a { color: inherit; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+a:hover { text-decoration-color: var(--accent); }
+:focus-visible { outline: 1px solid var(--ink); outline-offset: 3px; }
+
+/* brackets are the visual language; hover inverts (no color backgrounds anywhere).
+   The 2px padding is cancelled by a -2px margin so the highlight adds no width. */
+nav { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+nav a, nav button, .links a { padding: 0 2px; margin: 0 -2px; text-decoration: none; }
+nav a::before, nav button::before, .links a::before { content: "["; content: "[" / ""; color: var(--dim); }
+nav a::after, nav button::after, .links a::after { content: "]"; content: "]" / ""; color: var(--dim); }
+nav a:hover, nav button:hover, nav a:focus-visible, nav button:focus-visible,
+.links a:hover, .links a:focus-visible { background: var(--ink); color: var(--bg); text-decoration: none; }
+nav a:hover::before, nav a:hover::after, nav button:hover::before, nav button:hover::after,
+nav a:focus-visible::before, nav a:focus-visible::after,
+.links a:hover::before, .links a:hover::after { color: inherit; }
+nav a[aria-current="page"] { color: var(--dim); }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+button[hidden] { display: none; }
+/* bigger tap area on touch without moving the layout */
+@media (pointer: coarse) {
+  nav a, nav button, .links a, footer a { padding: 10px 2px; margin: -10px -2px; }
+}
+
+/* lists: dash bullets with a hanging indent so wrapped lines align under the text */
+ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+li { padding-left: 2ch; text-indent: -2ch; }
+li::before { content: "- "; content: "- " / ""; color: var(--faint); }
+
+/* highlight chips: [ ... ] with a faint ink tint */
+.hl { background: color-mix(in srgb, var(--ink) 8%, transparent); }
+.hl::before { content: "["; content: "[" / ""; color: var(--dim); }
+.hl::after { content: "]"; content: "]" / ""; color: var(--dim); }
+
+#nowplaying { color: var(--dim); font-size: .9em; }
+#nowplaying a { color: var(--ink); }
+#nowplaying .dot { color: var(--accent); animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .3; } }
+
+/* github contributions: ink tinted at 25/45/70/100% into the bg */
+/* the graph spans the whole column: one square per day, as wide as the column allows */
+.contrib { display: grid; grid-auto-flow: column; grid-template-columns: repeat(var(--weeks, 26), 1fr); grid-template-rows: repeat(7, auto); gap: 3px; width: 100%; }
+.contrib i { aspect-ratio: 1; background: var(--line); opacity: 0; animation: fade .4s ease forwards; }
+.contrib i[data-l="1"] { background: color-mix(in srgb, var(--ink) 25%, var(--bg)); }
+.contrib i[data-l="2"] { background: color-mix(in srgb, var(--ink) 45%, var(--bg)); }
+.contrib i[data-l="3"] { background: color-mix(in srgb, var(--ink) 70%, var(--bg)); }
+.contrib i[data-l="4"] { background: var(--ink); }
+@keyframes fade { to { opacity: 1; } }
+
+/* projects */
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 28px; align-items: stretch; }
+.card { display: flex; flex-direction: column; gap: 12px; scroll-margin-top: 96px; }
+@media (max-width: 639px) { .grid { grid-template-columns: 1fr; } }
+.media {
+  position: relative; aspect-ratio: 16 / 9; border-radius: 4px; overflow: hidden;
+  background: var(--line); container-type: inline-size;
+  display: grid; place-items: center;
+}
+.media img, .media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+/* no screenshot yet: the project name in ASCII, sized to fill the box */
+.head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.head h3 { font-size: 1.05rem; }
+.card .links { display: flex; gap: 12px; margin-top: auto; padding-top: 4px; } /* links sit on the card's last line so rows align */
+.chip { flex: none; font-size: .72rem; line-height: 1.5; padding: 0 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--dim); }
+.chip.on { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.chip.wip { border-color: var(--ink); color: var(--ink); }
+.blurb { font-size: .84rem; }
+.role, .stack { font-size: .76rem; color: var(--dim); }
+.card:target h3 { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+
+footer { display: flex; flex-direction: column; gap: 4px; margin-top: 64px; color: var(--dim); font-size: .8125rem; }
+footer em { font-style: italic; }
+footer a { text-decoration: none; }
+footer a::before { content: "["; content: "[" / ""; color: var(--dim); }
+footer a::after { content: "]"; content: "]" / ""; color: var(--dim); }
+.muted { color: var(--dim); font-size: .9em; }
+
+/* the dotted mountains (main.js) live on a fixed canvas behind everything */
+/* sized by css, not script, so it can never shift the layout when the dots arrive */
+canvas.mountains { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+/* the first-visit rise: a soft mask edge climbs from the bottom (a 3x tall mask slides down over the canvas) */
+canvas.mountains.rise {
+  -webkit-mask-image: linear-gradient(to top, #000 33.4%, transparent 66.6%); mask-image: linear-gradient(to top, #000 33.4%, transparent 66.6%);
+  -webkit-mask-size: 100% 300%; mask-size: 100% 300%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  animation: rise 1.8s cubic-bezier(.2, .7, .2, 1) both;
+}
+@keyframes rise { from { -webkit-mask-position: 0 0; mask-position: 0 0; } to { -webkit-mask-position: 0 100%; mask-position: 0 100%; } }
+/* a card with no screenshot yet: the same dots, thickening toward the bottom */
+.media.empty::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(circle, var(--faint) 0.8px, transparent 1.1px) 0 0 / 5.6px 5.6px;
+  -webkit-mask-image: linear-gradient(to top, #000, transparent 90%);
+  mask-image: linear-gradient(to top, #000, transparent 90%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #nowplaying .dot, .contrib i { animation: none; }
+  canvas.mountains.rise { animation: none; -webkit-mask-image: none; mask-image: none; }
+  .contrib i { opacity: 1; }
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none; }
+}
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .4s; }

@@ -37,3 +37,7 @@ coverage/
 # Temporary
 *.tmp
 .cache/
+.gstack/
+
+# Local-only originals
+_archive/

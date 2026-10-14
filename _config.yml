@@ -1,0 +1,4 @@
+# GitHub Pages runs Jekyll on a branch deploy even with no build step of our own.
+# This only keeps build-time sources out of the published site.
+exclude:
+  - tools
