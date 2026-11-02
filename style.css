@@ -67,11 +67,14 @@ nav { display: flex; flex-wrap: wrap; gap: 4px 12px; }
 nav a, nav button, .links a { padding: 0 2px; margin: 0 -2px; text-decoration: none; }
 nav a::before, nav button::before, .links a::before { content: "["; content: "[" / ""; color: var(--dim); }
 nav a::after, nav button::after, .links a::after { content: "]"; content: "]" / ""; color: var(--dim); }
-nav a:hover, nav button:hover, nav a:focus-visible, nav button:focus-visible,
-.links a:hover, .links a:focus-visible { background: var(--ink); color: var(--bg); text-decoration: none; }
-nav a:hover::before, nav a:hover::after, nav button:hover::before, nav button:hover::after,
-nav a:focus-visible::before, nav a:focus-visible::after,
-.links a:hover::before, .links a:hover::after { color: inherit; }
+nav a:focus-visible, nav button:focus-visible, .links a:focus-visible { background: var(--ink); color: var(--bg); text-decoration: none; }
+nav a:focus-visible::before, nav a:focus-visible::after { color: inherit; }
+/* touch screens keep :hover after a tap, which would leave the button inverted */
+@media (hover: hover) {
+  nav a:hover, nav button:hover, .links a:hover { background: var(--ink); color: var(--bg); text-decoration: none; }
+  nav a:hover::before, nav a:hover::after, nav button:hover::before, nav button:hover::after,
+  .links a:hover::before, .links a:hover::after { color: inherit; }
+}
 nav a[aria-current="page"]:not(:hover, :focus-visible) { color: var(--dim); }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
 button[hidden] { display: none; }
