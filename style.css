@@ -72,7 +72,7 @@ nav a:hover, nav button:hover, nav a:focus-visible, nav button:focus-visible,
 nav a:hover::before, nav a:hover::after, nav button:hover::before, nav button:hover::after,
 nav a:focus-visible::before, nav a:focus-visible::after,
 .links a:hover::before, .links a:hover::after { color: inherit; }
-nav a[aria-current="page"] { color: var(--dim); }
+nav a[aria-current="page"]:not(:hover, :focus-visible) { color: var(--dim); }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
 button[hidden] { display: none; }
 /* bigger tap area on touch without moving the layout */
@@ -158,3 +158,37 @@ canvas.mountains.rise {
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none; }
 }
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .4s; }
+
+/* resume: a sheet of paper over the mountains, set like the LaTeX original.
+   Computer Modern (OFL 1.1, fonts/cmu-OFL.txt), subset to latin. Paper stays white in both themes. */
+@font-face { font-family: "CMU Serif"; src: url("fonts/cmu-serif-500-roman.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "CMU Serif"; src: url("fonts/cmu-serif-700-roman.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "CMU Serif"; src: url("fonts/cmu-serif-500-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+main.sheet, body:has(main.sheet) header { width: min(816px, 100%); }
+.paper {
+  --line: #000;
+  display: flex; flex-direction: column; gap: 10px;
+  background: #fff; color: #000; padding: clamp(24px, 6vw, 48px) clamp(16px, 6vw, 56px);
+  box-shadow: 0 2px 16px rgb(0 0 0 / .25);
+  font: 15px/1.25 "CMU Serif", "Latin Modern Roman", Georgia, "Times New Roman", serif;
+}
+.paper .top { text-align: center; }
+.paper h2 { font-size: 2.5em; font-weight: 700; font-variant: small-caps; color: inherit; line-height: 1.1; }
+.paper h2::before { content: none; }
+.paper .top p { font-size: .9em; }
+.paper section { gap: 4px; }
+.paper h3 { font-size: 1.2em; font-variant: small-caps; border-bottom: 1px solid #000; margin-bottom: 2px; }
+.paper .entry { padding-left: 14px; margin-bottom: 3px; }
+.paper .row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 16px; }
+.paper .sub, .paper .small, .paper li, .paper .skills { font-size: .9em; }
+.paper .skills { padding-left: 14px; }
+.paper ul { gap: 0; margin-top: 1px; padding-left: 16px; }
+.paper li::before { content: "• "; content: "• " / ""; color: inherit; }
+/* resume.pdf is this sheet printed from the browser */
+@media print {
+  @page { size: letter; margin: .45in .55in; }
+  header, footer, canvas.mountains, .sheet > .links { display: none; }
+  body { padding: 0; background: #fff; }
+  main.sheet { width: auto; padding: 0; }
+  .paper { padding: 0; box-shadow: none; font-size: 14px; }
+}
